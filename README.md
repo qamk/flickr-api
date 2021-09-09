@@ -9,6 +9,7 @@ I decided to set up **environment variables** instead of using [Figaro](https://
 4. Open up the terminal and check environment variables using:
   - `env` or `printenv`
   - `env | grep [PATTERN]` or `printenv | grep [PATTERN]` to search the output for PATTERN
+
 When deployed, you will have to refer to the host's documentation for setting environment variables.
 
 ## Running the app
