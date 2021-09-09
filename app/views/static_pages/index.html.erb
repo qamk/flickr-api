@@ -1,2 +1,29 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<div class="section">
+  <div class="container">
+    <div class="level">
+      <div class="level-item has-text-centered">
+        <%= form_with url: root_path, method: :get do |form| %>
+          <div class="field">
+            <%= form.label :user_id, 'Enter a Flickr User ID or be cursed to see my photos!!!'%>
+            <div class="control">
+              <%= form.text_field :user_id, placeholder: 'XXXXXXXXX@N0X', class: 'input' %>
+            </div>
+          </div>
+          <%= form.submit 'Find photos', class: 'button is-link is-inverted' %>
+        <% end %>
+      </div>
+    </div>
+    <%# simple_format @images.to_yaml %>
+    <% if @images %>
+      <div class="columns is-multiline">
+        <% @images.each do |image| %>
+          <div class="column is-half">
+            <img src="<%= image %>" alt="Flickr Img">
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="content has-text-weight-bold">No photos found..........</p>
+    <% end %>
+  </div>
+</div>

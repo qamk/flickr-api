@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <%= link_to root_path do %>
+          <h4 class="title is-4 has-text-info-dark">FlickrFetchApp</h4>
+        <% end %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

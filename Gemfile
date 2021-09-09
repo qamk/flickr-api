@@ -45,6 +45,7 @@ group :development do
   gem 'bulma-rails', '~> 0.9.1'
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'http'
+  gem 'binding_of_caller'
 end
 
 group :test do
