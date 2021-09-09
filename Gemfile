@@ -44,6 +44,7 @@ group :development do
   gem 'spring'
   gem 'bulma-rails', '~> 0.9.1'
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  gem 'http'
 end
 
 group :test do
